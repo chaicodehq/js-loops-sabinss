@@ -32,13 +32,7 @@
  */
 export function cricketScoreboard(balls) {
     // Your code here\
-    if (!balls) {
-        return { totalRuns: 0, totalBalls: 0, wickets: 0, fours: 0, sixes: 0 };
-    }
-    if (typeof balls == 'string') {
-        return { totalRuns: 0, totalBalls: 0, wickets: 0, fours: 0, sixes: 0 };
-    }
-    if (Array.isArray(balls) && balls.length === 0) {
+    if (!Array.isArray(balls) || balls.length === 0) {
         return { totalRuns: 0, totalBalls: 0, wickets: 0, fours: 0, sixes: 0 };
     }
     let scoreBoard = { totalRuns: 0, totalBalls: 0, wickets: 0, fours: 0, sixes: 0 };
